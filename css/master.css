@@ -139,9 +139,53 @@ nav.stroke ul li a:hover:after {
     position: relative;
     display: block;
     width: calc(100% + 1.3px);
-    height: 174px;
+    height: 140px;
 }
 
 .bottomWave .shape-fill {
     fill: #575757;
+}
+
+@media only screen and (max-width: 725px) {
+  #navBarItems {
+    display: none;
+  }
+
+  #NavFabian {
+    transition: 0.25s;
+    top: 0px;
+    font-size: 25px;
+    width: 100%;
+    text-align: center;
+    left: 0;
+  }
+}
+
+@media only screen and (max-width: 1080px) {
+  nav ul li a {
+    margin: 0 -7.5px;
+  }
+
+  #NavFabian {
+    transition: 0.25s;
+    top: 0px;
+    font-size: 25px;
+  }
+
+  #fsp_title {
+    font-size: 100px;
+  }
+
+  #fsp_subtitle {
+    font-size: 16px;
+  }
+
+  .mainMenuCenterNavigation a {
+    font-size: 15px;
+    padding: 3px 6px;
+  }
+
+  .bottomWave svg {
+      height: 100px;
+  }
 }
