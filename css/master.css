@@ -8,6 +8,16 @@ body {
   overflow: hidden;
 }
 
+#NavFabian {
+  position: absolute;
+  color: white;
+  top: -8px;
+  left: 20px;
+  font-size: 29px;
+  font-weight: bold;
+  font-family: 'Caveat', cursive;
+}
+
 /* NAVIGATION */
 nav {
   position: absolute;
@@ -18,7 +28,8 @@ nav {
   background-color: #9400e3;
   left: 0;
   top: 0;
-  height: 10%;
+  height: 65px;
+  font-family: 'Roboto';
 }
 
 nav ul {
@@ -74,14 +85,63 @@ nav.stroke ul li a:hover:after {
 }
 
 #fsp_title {
+  font-family: 'Bebas Neue', cursive;
   color: #f0f0f0;
   margin-bottom: 0px;
-  font-size: 70px;
+  font-size: 130px;
 }
 
 #fsp_subtitle {
   font-size: 18px;
-  margin-top: 0px;
+  margin-top: -35px;
   color: #404040;
   font-weight: lighter;
+}
+
+.mainMenuCenterNavigation {
+  background-color:#212121;
+  padding: 20px 20px;
+  border-radius: 20px;
+  text-align: center;
+  margin: 75px auto;
+  width: 60%;
+}
+
+.mainMenuCenterNavigation a {
+  font-family: 'Indie Flower';
+  border-color: #9400e3;
+  padding: 7px 12px;
+  border-radius: 8px;
+  font-size: 24px;
+  margin-left: 5px;
+  transition: 1s;
+  background-color: #212121;
+  color: white;
+  border-style: solid;
+  text-decoration: none;
+}
+
+.mainMenuCenterNavigation a:hover {
+  transition: 0.5s;
+  border-color: #4c00ff;
+}
+
+.bottomWave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.bottomWave svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 174px;
+}
+
+.bottomWave .shape-fill {
+    fill: #575757;
 }
