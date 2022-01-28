@@ -3,7 +3,7 @@ body {
   left: 0;
   top: 0;
   width: 100%;
-  height: 100%;
+  height: 150%;
   font-family: verdana;
   overflow: hidden;
 }
@@ -94,13 +94,13 @@ nav.stroke ul li a:hover:after {
 #fsp_subtitle {
   font-size: 18px;
   margin-top: -35px;
-  color: #404040;
+  color: #525252;
   font-weight: lighter;
 }
 
 .mainMenuCenterNavigation {
   background-color:#212121;
-  padding: 20px 20px;
+  padding: 25px 20px;
   border-radius: 20px;
   text-align: center;
   margin: 75px auto;
@@ -131,7 +131,6 @@ nav.stroke ul li a:hover:after {
     bottom: 0;
     left: 0;
     width: 100%;
-    overflow: hidden;
     line-height: 0;
 }
 
@@ -146,7 +145,7 @@ nav.stroke ul li a:hover:after {
     fill: #575757;
 }
 
-@media only screen and (max-width: 725px) {
+@media only screen and (max-width: 760px) {
   #navBarItems {
     display: none;
   }

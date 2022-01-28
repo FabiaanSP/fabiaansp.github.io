@@ -7,6 +7,7 @@
 
     <!-- Importing Stylesheets-->
     <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/about.css">
 
     <!-- CSS libraries -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
@@ -19,6 +20,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/aboutScroll.js" charset="utf-8"></script>
   </head>
   <body>
 
@@ -37,16 +42,26 @@
       </ul>
     </nav>
 
-    <div class="mainTitle">
-      <h1 id="fsp_title" class="animate__animated animate__backInDown">Fabian Sporn</h1>
-      <h4 id ="fsp_subtitle" class="animate__animated animate__backInDown">Handgemachte Homepage, entwickelt von Fabian Sporn</h4>
+    <div class="containerRight animate__animated" id="box0">
+      <h2>Allgemeines</h2>
+      <p>Name: Fabian Sporn</p>
+      <p>Geburtstag: 14.08.2006</p>
+      <p>Herkunft: Salzburg, Österreich</p>
+      <p>Sprachen: Deutsch, Englisch</p>
     </div>
 
-    <div class="mainMenuCenterNavigation animate__animated animate__backInUp">
-      <a href="about.html"><i class="fa-solid fa-address-book"></i> Über Mich</a>
-      <a href="socialmedia.html"><i class="fa-solid fa-hashtag"></i> Social Media</a>
-      <a href="projekte.html"><i class="fa-solid fa-briefcase"></i> Projekte</a>
-      <a href="sonstiges.html">Sonstiges</a>
+    <div class="containerLeft animate__animated" style="display: none" id="box1">
+      <h2>Schule</h2>
+      <p>Name: Fabian Sporn</p>
+      <p>Geburtstag: 14.08.2006</p>
+      <p></p>
+    </div>
+
+    <div class="containerRight animate__animated" style="display: none" id="box2">
+      <h2>Hobbys</h2>
+      <p>Name: Fabian Sporn</p>
+      <p>Geburtstag: 14.08.2006</p>
+      <p></p>
     </div>
 
     <div class="bottomWave">
