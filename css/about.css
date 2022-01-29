@@ -1,5 +1,6 @@
 :root {
   --purple: #a600ff;
+  --circle-color: #212121;
 }
 
 .containerRight {
@@ -33,4 +34,66 @@
 
 .bluecolor {
   color: #006eff;
+}
+
+.scrollIndicator {
+  position: absolute;
+  left: 0;
+  top: 30vh;
+  height: 40vh;
+  width: 7vw;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  font-size: 40px;
+}
+
+.circle0 {
+  transition: 1s;
+  display: inline-block;
+  background-color: var(--circle-color);
+  width: 70px;
+  height: 70px;
+  border-radius: 100px;
+}
+
+.circle0 i{
+  margin-top: 1.5vh;
+}
+
+.circle1 {
+  transition: 1s;
+  display: inline-block;
+  background-color: var(--circle-color);
+  width: 70px;
+  height: 70px;
+  border-radius: 100px;
+  margin-top: 2vh;
+}
+
+.circle1 i{
+  margin-top: 1.5vh;
+}
+
+.circle2 {
+  transition: 1s;
+  display: inline-block;
+  background-color: var(--circle-color);
+  width: 70px;
+  height: 70px;
+  border-radius: 100px;
+  margin-top: 2vh;
+}
+
+.circle2 i{
+  margin-top: 1.5vh;
+}
+
+.selectedCircle {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-color: #1f1f1f;
+  border-radius: 30px;
+  margin-top: 1vh;
 }
