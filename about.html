@@ -3,10 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fabian Sporn - Home</title>
+    <title>Fabian Sporn - About</title>
 
     <!-- Importing Stylesheets-->
     <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/about.css">
 
     <!-- CSS libraries -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
@@ -19,6 +20,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/aboutScroll.js" charset="utf-8"></script>
   </head>
   <body>
 
@@ -32,23 +37,34 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">Über Mich</a></li>
         <li><a href="socialmedia.html">Social Media</a></li>
-        <li><a href="school.html">Schulintern</a></li>
+        <li><a href="schule.html">Schulintern</a></li>
         <li><a href="projekte.html">Projekte</a></li>
         <li><a href="sonstiges.html">Sonstiges</a></li>
       </ul>
     </nav>
 
-    <div class="mainTitle">
-      <h1 id="fsp_title" class="animate__animated animate__backInDown">Fabian Sporn</h1>
-      <h4 id ="fsp_subtitle" class="animate__animated animate__backInDown">Handgemachte Homepage, entwickelt von Fabian Sporn</h4>
+    <div class="containerRight animate__animated animate__fadeInRightBig" id="box0">
+      <h2>Allgemeines</h2>
+      <p>Name: <span class="bluecolor">Fabian Sporn</span></p>
+      <p>Geburtstag: <span class="bluecolor">14.08.2006</span></p>
+      <p>Herkunft: <span class="bluecolor">Salzburg, Österreich</span></p>
+      <p>Sprachen: <span class="bluecolor">Deutsch, Englisch</span></p>
     </div>
 
-    <div class="mainMenuCenterNavigation animate__animated animate__backInUp">
-      <a href="about.html"><i class="fa-solid fa-address-book"></i> Über Mich</a>
-      <a href="socialmedia.html"><i class="fa-solid fa-hashtag"></i> Social Media</a>
-      <a href="school.html"><i class="fas fa-graduation-cap"></i> Schulintern</a>
-      <a href="projekte.html"><i class="fa-solid fa-briefcase"></i> Projekte</a>
-      <!-- <a href="sonstiges.html">Sonstiges</a> -->
+    <div class="containerRight animate__animated" style="display: none" id="box1">
+      <h2>Schule</h2>
+      <p>Derzeitge Schule: <a href="https://www.hak-neumarkt.com/" target="_blank">Handelsakademie Neumarkt am Wallersee</a></p>
+      <p>Klasse: <span class="bluecolor">1CHK</span></p>
+      <p>Zweig: <span class="bluecolor">Digital Business / Programming</span></p>
+    </div>
+
+    <div class="containerRight animate__animated" style="display: none" id="box2">
+      <h2>Hobbys / Freizeit</h2>
+      <p>Programmieren</p>
+      <p>Mopedfahren</p>
+      <p>Sport, Fitness-Studio</p>
+      <br>
+      <p>Mitglied der Freiwilligen Feuerwehr - <a href="https://www.feuerwehr-strasswalchen.at/ff/" target="_blank">Hauptwache Straßwalchen</a></p>
     </div>
 
     <div class="bottomWave">
