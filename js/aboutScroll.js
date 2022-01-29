@@ -2,6 +2,10 @@ let scrollIndex = 0;
 let maxScrollIndex = 2;
 let isAnimating = false;
 
+setTimeout(function(){
+  $('#box0').removeClass('animate__fadeInRightBig');
+},1000)
+
 window.onwheel = e => {
   if(e.deltaY >= 0){
 

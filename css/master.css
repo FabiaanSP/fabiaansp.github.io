@@ -104,7 +104,7 @@ nav.stroke ul li a:hover:after {
   border-radius: 20px;
   text-align: center;
   margin: 75px auto;
-  width: 60%;
+  width: 70%;
 }
 
 .mainMenuCenterNavigation a {
@@ -145,20 +145,7 @@ nav.stroke ul li a:hover:after {
     fill: #575757;
 }
 
-@media only screen and (max-width: 760px) {
-  #navBarItems {
-    display: none;
-  }
-
-  #NavFabian {
-    transition: 0.25s;
-    top: 0px;
-    font-size: 25px;
-    width: 100%;
-    text-align: center;
-    left: 0;
-  }
-}
+/* Kleinere Bildschirme e.g Laptop */
 
 @media only screen and (max-width: 1080px) {
   nav ul li a {
@@ -186,5 +173,50 @@ nav.stroke ul li a:hover:after {
 
   .bottomWave svg {
       height: 100px;
+  }
+}
+
+/* Handygröße */
+
+@media only screen and (max-width: 760px) {
+  #navBarItems {
+    display: none;
+  }
+
+  #NavFabian {
+    transition: 0.25s;
+    top: 0px;
+    font-size: 25px;
+    width: 100%;
+    text-align: center;
+    left: 0;
+  }
+
+  .mainTitle {
+    margin-top: 150px;
+  }
+
+  #fsp_title {
+    margin-top: 0em;
+    font-size: 70px;
+  }
+
+  #fsp_subtitle {
+    font-size: 11px;
+    margin-top: -20px;
+    color: #adadad;
+  }
+
+  .mainMenuCenterNavigation a {
+    display: inline-table;
+    margin-top: 10px;
+    font-size: 19px;
+  }
+
+  .mainMenuCenterNavigation {
+    margin-top: 25px;
+    width: 40%;
+    padding-left: 5px;
+    padding-right: 5px;
   }
 }

@@ -1,11 +1,17 @@
+:root {
+  --purple: #a600ff;
+}
+
 .containerRight {
+  font-family: 'Indie Flower';
+  font-size: 24px;
   background-color: #212121;
   position: absolute;
   right: 0;
   top: 200px;
   padding-left: 70px;
   padding-right: 600px;
-  padding-bottom: 190px;
+  padding-bottom: 100px;
   padding-top: 50px;
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
@@ -13,17 +19,19 @@
   color: #c4c4c4;
   text-shadow: 3px 3px 3px #242424;
 
-  border:2px solid #2600ff;
+  box-shadow: 0px 0px 5px 5px var(--purple);
 }
 
 .containerLeft {
+  font-family: 'Indie Flower';
+  font-size: 24px;
   background-color: #212121;
   position: absolute;
   Left: 0;
   top: 200px;
   padding-left: 70px;
   padding-right: 600px;
-  padding-bottom: 190px;
+  padding-bottom: 100px;
   padding-top: 50px;
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
@@ -31,5 +39,17 @@
   color: #c4c4c4;
   text-shadow: 3px 3px 3px #242424;
 
-  border:2px solid #2600ff;
+  border:2px dotted #9400e3;
+
+  box-shadow: 0px 0px 5px 5px var(--purple);
+}
+
+.containerLeft p {
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.containerRight p {
+  margin-bottom: 0px;
+  margin-top: 0px;
 }
