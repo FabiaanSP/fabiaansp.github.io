@@ -98,6 +98,18 @@ nav.stroke ul li a:hover:after {
   font-weight: lighter;
 }
 
+#title404 {
+  color: white;
+  font-size: 29px;
+  margin-bottom: 10px;
+}
+
+#subtitle404 {
+  color: white;
+  font-size: 27px;
+  margin-top: 0px;
+}
+
 .mainMenuCenterNavigation {
   background-color:#212121;
   padding: 25px 20px;
