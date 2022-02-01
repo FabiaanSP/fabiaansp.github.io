@@ -81,7 +81,7 @@ nav.stroke ul li a:hover:after {
 .mainTitle {
   width: 100%;
   text-align: center;
-  margin-top: 200px;
+  margin-top: 20vh;
 }
 
 #fsp_title {
@@ -138,7 +138,7 @@ nav.stroke ul li a:hover:after {
     position: relative;
     display: block;
     width: calc(100% + 1.3px);
-    height: 140px;
+    height: 13vh;
 }
 
 .bottomWave .shape-fill {
@@ -159,6 +159,7 @@ nav.stroke ul li a:hover:after {
   }
 
   #fsp_title {
+    margin-top: 0px;
     font-size: 100px;
   }
 
