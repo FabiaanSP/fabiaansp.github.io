@@ -4,8 +4,15 @@ let isAnimating = false;
 
 let indicatorAnimation = "animate__rubberBand";
 
+const animation_enterFromTop = "animate__zoomIn";
+const animation_enterFromBottom = "animate__zoomIn";
+const animation_exitToTop = "animate__zoomOut";
+const animation_exitToBottom = "animate__zoomOut";
+
+const cooldownTillFadeInAnimation = 350;
+
 setTimeout(function(){
-  $('#box0').removeClass('animate__fadeInRightBig');
+  $('#box0').removeClass(animation_enterFromTop);
 },1000)
 
 window.onwheel = e => {
@@ -15,31 +22,33 @@ window.onwheel = e => {
 
     if(!isAnimating && scrollIndex < maxScrollIndex) {
 
+      // If abfrage überprüft ob bereits eine Animation am laufen ist, und ob man eh noch nicht auf der letzten Scroll-Seite angekommen ist.
+
       console.log("Scroll Down");
       isAnimating = true;
-      $('#box' + scrollIndex).addClass('animate__fadeOutUpBig');
+      $('#box' + scrollIndex).addClass(animation_exitToTop);
       $('#circle' + scrollIndex).removeClass(indicatorAnimation);
 
       document.getElementById("circle" + scrollIndex).innerHTML = "";
       setTimeout(function(){
 
         document.getElementById("box" + scrollIndex).style.display = "none";
-        $('#box' + scrollIndex).removeClass('animate__fadeOutUpBig');
+        $('#box' + scrollIndex).removeClass(animation_exitToTop);
         scrollIndex += 1;
 
         document.getElementById("box" + scrollIndex).style.display = "block";
-        $('#box' + scrollIndex).removeClass('animate__fadeInDownBig');
-        $('#box' + scrollIndex).addClass('animate__fadeInUpBig');
+        $('#box' + scrollIndex).removeClass(animation_enterFromBottom);
+        $('#box' + scrollIndex).addClass(animation_enterFromBottom);
         $('#circle' + scrollIndex).addClass(indicatorAnimation);
 
         document.getElementById("circle" + scrollIndex).innerHTML = '<i class="fas fa-angle-left"></i>';
 
         setTimeout(function(){
           isAnimating = false;
-          $('#box' + scrollIndex - 1).removeClass('animate__fadeInUpBig');
+          $('#box' + scrollIndex - 1).removeClass(animation_enterFromBottom);
           $('#circle' + scrollIndex).removeClass(indicatorAnimation);
         },1000)
-      },200)
+      },cooldownTillFadeInAnimation)
 
     }
 
@@ -50,25 +59,25 @@ window.onwheel = e => {
       console.log('Scroll Up');
 
       isAnimating = true;
-      $('#box' + scrollIndex).addClass('animate__fadeOutDownBig');
+      $('#box' + scrollIndex).addClass(animation_exitToBottom);
       $('#circle' + scrollIndex).removeClass(indicatorAnimation);
 
       document.getElementById("circle" + scrollIndex).innerHTML = "";
       setTimeout(function(){
 
         document.getElementById("box" + scrollIndex).style.display = "none";
-        $('#box' + scrollIndex).removeClass('animate__fadeOutDownBig');
+        $('#box' + scrollIndex).removeClass(animation_exitToBottom);
         scrollIndex -= 1;
 
         document.getElementById("box" + scrollIndex).style.display = "block";
-        $('#box' + scrollIndex).removeClass('animate__fadeInUpBig');
-        $('#box' + scrollIndex).addClass('animate__fadeInDownBig');
+        $('#box' + scrollIndex).removeClass(animation_enterFromBottom);
+        $('#box' + scrollIndex).addClass(animation_enterFromTop);
         $('#circle' + scrollIndex).addClass(indicatorAnimation);
         document.getElementById("circle" + scrollIndex).innerHTML = '<i class="fas fa-angle-left"></i>';
 
         setTimeout(function(){
           isAnimating = false;
-          $('#box' + scrollIndex - 1).removeClass('animate__fadeInDownBig');
+          $('#box' + scrollIndex - 1).removeClass(animation_enterFromTop);
           $('#circle' + scrollIndex).removeClass(indicatorAnimation);
         },1000)
       },200)
