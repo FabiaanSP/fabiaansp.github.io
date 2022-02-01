@@ -1,0 +1,39 @@
+:root {
+    --contentBackground: #212121;
+    --contentFont: 'Indie Flower';
+}
+
+.SocialmediaContent {
+    background-color: var(--contentBackground);
+    font-family: var(--contentFont);
+    border-radius: 20px;
+    width: 70%;
+    padding: 15px 15px;
+    padding-bottom: 15px;
+    margin: 30vh auto;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.SocialmediaContent h1 {
+    margin-top: 10px;
+    color: white;
+    font-size: 2vw;
+}
+
+.SocialmediaContent a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+
+    padding: 5px 15px;
+    border:#9400e3 solid;
+    border-radius: 15px;
+
+    transition: 1s;
+}
+
+.SocialmediaContent a:hover {
+    transition: 0.5s;
+    border-color: #4c00ff;
+  }
