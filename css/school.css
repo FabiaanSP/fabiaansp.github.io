@@ -1,9 +1,9 @@
 .loginPanel {
     position: relative;
-    margin: 150px auto;
+    margin: 120px auto;
     background-color: rgb(68, 68, 68);
     width: 20vw;
-    height: 40vh;
+    height: 50vh;
 
     text-align: center;
     padding-top: 30px;
@@ -19,7 +19,8 @@ input[type=text], input[type=password] {
     width: 70%;
     padding: 10px 7px;
     border-radius: 15px;
-    border: 0;
+    border-color: aliceblue;
+    border-style: solid;
     margin-top: 15px;
     text-align: center;
 }
