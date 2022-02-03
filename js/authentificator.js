@@ -24,8 +24,6 @@ function inputCorrect(key) {
             window.location.href = "intern.html?token=" + token;
 
         },500);;
-
-
     }
 }
 
@@ -42,20 +40,4 @@ function auth() {
         } else { inputWrong(); }
 
     } else { inputWrong(); }
-}
-
-function json(url) {
-    return fetch(url).then(res => res.json());
-  }
-
-function generateToken(key) {
-    if (key == password) {
-
-        json(`https://api.ipdata.co?api-key=086d68eee3f19808d82ead83c2f629231feb65b6081115310d499d84`).then(data => {
-          console.log('fetched ip: ' + data.ip);
-          token = sha256(data.ip + sha256(key));
-          // so many more properties
-          });
-
-    } else {console.error("getIP() - Access denied")}
 }
