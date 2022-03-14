@@ -1,0 +1,123 @@
+body {
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+
+    background-image: linear-gradient(to bottom right, rgb(76, 56, 255), rgb(129, 51, 255));
+}
+
+.custom-shape-divider-bottom-1647177666 {
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    box-shadow: 0px 50px 1px rgb(58, 58, 58);
+}
+
+.custom-shape-divider-bottom-1647177666 svg {
+    position: relative;
+    display: block;
+    width: calc(103% + 1.3px);
+    height: 63px;
+}
+
+.custom-shape-divider-bottom-1647177666 .shape-fill {
+    fill: rgb(58, 58, 58);
+}
+
+nav {
+  position: relative;
+  z-index: 100;
+}
+
+nav .logo {
+    color: white;
+    font-size: 30px;
+    font-family: 'Permanent Marker', cursive;
+    text-align: center;
+
+    background-image:linear-gradient(90deg, rgb(51, 255, 187), rgb(56, 248, 255));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+nav .nav-list {
+    text-align: center;
+}
+
+nav .nav-list li {
+    display: inline-block;
+    color: white;
+    font-family: 'Kalam', cursive;
+    font-size: 25px;
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Style The Dropdown Button */
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    z-index: 50;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    z-index: 50;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: fixed;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: rgb(53, 53, 53);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: 'Kalam', cursive;
+    z-index: 50;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #f1f1f1}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+    animation: growDown 500ms ease-in-out forwards;
+    transform-origin: top center;
+  }
+
+@keyframes growDown {
+    0% {transform: scaleY(0)}
+    80% {transform: scaleY(1.1)}
+    100% {transform: scaleY(1)}
+}
+
+.main-content {
+  margin: auto auto;
+  text-align: center;
+}
