@@ -1,0 +1,39 @@
+input {
+    margin-top: 1.75em;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 10px;
+    border: 0;
+    text-align: center;
+}
+
+#idInput {
+    width: 30px;
+    margin-left: 7px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+p {
+    margin-top: 3em;
+}
+
+.content button {
+    margin-top: 2em;
+    padding: 5px;
+    padding-bottom: 2.5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    border: 0;
+    width: 13%;
+    background-color: white;
+    font-family: 'Kalam', cursive;
+    font-size: 20px;
+    color: rgb(80, 80, 80)
+}
+
+.content button:hover {
+    background-color: rgb(240, 240, 240);
+}

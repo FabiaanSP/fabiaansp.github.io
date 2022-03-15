@@ -1,0 +1,15 @@
+@media screen and (max-width: 680px) {
+    nav {
+        visibility: hidden;
+    }
+
+    #preloader-text {
+        font-size: 25px;
+        margin-top: 2em;
+        content: 'InvestmentAkademie';
+    }
+
+    #preloader-subtitle {
+        display: none;
+    }
+  }

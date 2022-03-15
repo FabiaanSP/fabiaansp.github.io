@@ -18,8 +18,7 @@ tr {
   }
 
   th {
-      background-color: #f54756;
-      position: sticky;
+      background-color: #ffb619;
   }
 
   tr:nth-child(odd) {

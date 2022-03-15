@@ -24,6 +24,10 @@ if (page == "home") {
     titleSufix = "Sponsoren"
 } else if (page == "schueler") {
     titleSufix = "Schüler 1C"
+} else if (page == "devlog") {
+    titleSufix = "DevLog"
+} else if (page == "employees") {
+    titleSufix = "Mitarbeiter Portal"
 }
 document.title = "Investmentakademie - " + titleSufix;
 

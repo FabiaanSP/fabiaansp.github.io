@@ -5,7 +5,7 @@ body {
     left: 0;
     top: 0;
 
-    background-image: linear-gradient(to bottom right, rgb(76, 56, 255), rgb(129, 51, 255));
+    background-image: linear-gradient(to bottom right, rgb(64, 43, 253), rgb(129, 51, 255));
 }
 
 .custom-shape-divider-bottom-1647177666 {
@@ -27,6 +27,14 @@ body {
 
 .custom-shape-divider-bottom-1647177666 .shape-fill {
     fill: rgb(58, 58, 58);
+}
+
+#logoImg {
+  position: absolute;
+  left: 5px;
+  top: 0px;
+  width: 200px;
+  height: 75px;
 }
 
 nav {
