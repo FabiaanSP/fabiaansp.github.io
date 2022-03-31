@@ -1,59 +1,68 @@
-/* Credits: Spinner by https://codepen.io/zerospree/pen/XWaGER */
-
-.preloader{
-  background:#ECF0F1;
-  width: 70vw;
-  height: 60vh;
-  margin: auto auto;
-  position: absolute;
-  transform:translate(22.5%, 20%);
-  border-radius: 25px;
-  box-shadow: 10px 10px 20px rgb(89, 0, 255);
+.preloader {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(34, 39, 61);
+    background-image: url("../images/bg-texture.png");
+    z-index: 2000;
 }
 
-#preloader-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: linear-gradient(to bottom right, rgb(59, 56, 255), rgb(129, 51, 255));
+.preloader-content-frame {
+    width: 70%;
+    margin: 6% auto;
+    background-color: white;
+    color: rgb(17, 17, 17);
+    padding: 20px 20px;
+    text-align: center;
+    height: 70%;
+    border-radius: 30px;
 }
 
-.preloader-content{position:absolute;top:40%;left:50%;transform:translate(-50%, -50%);
-  /*change these sizes to fit into your project*/
-  width:100px;
-  height:100px;
-}
-.preloader-content hr{border:0;margin:0;width:40%;height:40%;position:absolute;border-radius:50%;animation:spin 2s ease infinite}
-
-.preloader-content :first-child{background:#19A68C;animation-delay:-1.5s}
-.preloader-content :nth-child(2){background:#F63D3A;animation-delay:-1s}
-.preloader-content :nth-child(3){background:#FDA543;animation-delay:-0.5s}
-.preloader-content :last-child{background:#2c476e}
-
-@keyframes spin{
-  0%,100%{transform:translate(0)}
-  25%{transform:translate(160%)}
-  50%{transform:translate(160%, 160%)}
-  75%{transform:translate(0, 160%)}
+.preloader h1 {
+    font-size: 30px;
+    margin-top: 35%;
+    font-family: 'Permanent Marker', cursive;
 }
 
-/* Preloader Text */
-#preloader-text {
-  font-size: 30px;
-  font-family: 'Permanent Marker', cursive;
-
-  /* Center Positoin */
-  position:absolute;
-  top:60%;
-  left:50%;
-  transform:translate(-50%, 0%);
+.preloader h2 {
+    font-size: 23px;
+    color: rgb(65, 65, 65);
+    font-weight: lighter;
+    margin-top: 0.5em;
 }
 
-#preloader-subtitle {
-  position: absolute;
-  font-size: 17px;
-  margin-left: 1em;
-  color: rgb(109, 109, 109)
+.hideScrollbar {
+  overflow: hidden;
 }
+
+/* Spinner CSS */
+  
+  #preloader-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom right, rgb(59, 56, 255), rgb(129, 51, 255));
+  }
+  
+  .preloader-content{position:absolute;top:40%;left:50%;transform:translate(-50%, -50%);
+    /*change these sizes to fit into your project*/
+    width:100px;
+    height:100px;
+  }
+  .preloader-content hr{border:0;margin:0;width:40%;height:40%;position:absolute;border-radius:50%;animation:spin 2s ease infinite}
+  
+  .preloader-content :first-child{background:#19A68C;animation-delay:-1.5s}
+  .preloader-content :nth-child(2){background:#F63D3A;animation-delay:-1s}
+  .preloader-content :nth-child(3){background:#FDA543;animation-delay:-0.5s}
+  .preloader-content :last-child{background:#2c476e}
+  
+  @keyframes spin{
+    0%,100%{transform:translate(0)}
+    25%{transform:translate(160%)}
+    50%{transform:translate(160%, 160%)}
+    75%{transform:translate(0, 160%)}
+  }
