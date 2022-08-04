@@ -1,0 +1,95 @@
+h1, h2 { color: white; text-align: center; }
+
+h1 {
+    font-family: 'Bebas Neue', cursive;
+    margin-top: 10px;
+}
+
+h2 {
+    font-size: 0.9rem;
+}
+
+#prototyp {
+    color: rgb(224, 0, 0);
+    font-size: 1.5rem;
+}
+
+.head {
+    background-color: rgba(31, 31, 31, 0.527);
+    padding-top: 10px;
+    padding-bottom: 20px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.AttraktionsauswahlBereich {
+    padding: 30px;
+    text-align: center;
+}
+
+.AttraktionsauswahlBereich img {
+    height: 47vh;
+    aspect-ratio: 16/12;
+    border-radius: 20px;
+    position: relative;
+    z-index: 1;
+    left: 50vw;
+    transform: translateX(-50vw);
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.616);
+}
+
+.BtnOverlayShadow {
+    margin-top: -47vh;
+    border-radius: 20px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    height: 47vh;
+    aspect-ratio: 16/12;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.897));
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.BtnOverlayShadow p {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-decoration: none;
+    color: white;
+    width: 100%;
+}
+
+.Kategorieauswahl {
+    display: none;
+    position: absolute;
+    top: 15vh;
+    left: 50%;
+    max-height: 85vh;
+    transform: translateX(-50%);
+    margin-top: 40px;
+    text-align: center;
+    width: 80%;
+}
+
+.Kategorieauswahl button {
+    cursor: pointer;
+    transform: translateX(-50%);
+    transition: background-color 0.5s;
+    width: 100%;
+    margin-bottom: 35px;
+    padding: 15px;
+    border: 0;
+    border-radius: 13px;
+    background-color: rgba(6, 187, 0, 0.493);
+    color: white;
+    font-weight: bolder;
+    font-size: 16px;
+}
+
+.Kategorieauswahl button:hover {
+    transition: background-color 0.5s;
+    background-color: rgba(0, 139, 0, 0.555);
+}
