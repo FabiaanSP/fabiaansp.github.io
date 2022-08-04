@@ -20,6 +20,7 @@ h2 {
     padding-bottom: 20px;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
+    width: 100vw;
 }
 
 .AttraktionsauswahlBereich {
@@ -27,58 +28,53 @@ h2 {
     text-align: center;
 }
 
-.AttraktionsauswahlBereich img {
-    height: 47vh;
-    aspect-ratio: 16/12;
+.AttraktionsauswahlBereich article {
+    width: 100%;
+    height: 20vh;
+}
+
+.AttraktionsauswahlBereich article img {
+    box-shadow: 8px 10px rgba(0, 0, 0, 0.644);
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    filter: blur(1px)
+}
+
+.AttraktionsauswahlBereich article .BtnOverlayShadow {
     border-radius: 20px;
     position: relative;
     z-index: 1;
-    left: 50vw;
-    transform: translateX(-50vw);
-    box-shadow: 10px 10px rgba(0, 0, 0, 0.616);
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.815));
+    margin-top: -20vh;
 }
 
-.BtnOverlayShadow {
-    margin-top: -47vh;
-    border-radius: 20px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 2;
-    height: 47vh;
-    aspect-ratio: 16/12;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.897));
-    text-align: center;
-    font-size: 1.8rem;
-}
-
-.BtnOverlayShadow p {
+.AttraktionsauswahlBereich article .BtnOverlayShadow p {
     position: absolute;
     bottom: 10px;
     left: 50%;
-    transform: translateX(-50%);
-    text-decoration: none;
+    transform: translate(-50%);
     color: white;
-    width: 100%;
+    font-size: 20px;
 }
 
 .Kategorieauswahl {
     display: none;
     position: absolute;
     top: 15vh;
-    left: 50%;
     max-height: 85vh;
-    transform: translateX(-50%);
     margin-top: 40px;
     text-align: center;
     width: 80%;
+    width: 100vw;
 }
 
 .Kategorieauswahl button {
     cursor: pointer;
-    transform: translateX(-50%);
     transition: background-color 0.5s;
-    width: 100%;
+    width: 80%;
     margin-bottom: 35px;
     padding: 15px;
     border: 0;
