@@ -10,7 +10,11 @@ var today = new Date();
 refreshTimeTable();
 
 function refreshTimeTable() {
-    var time = parseInt(today.getHours().toString() + today.getMinutes().toString());
+    let mins = today.getMinutes();
+    if (mins < 10) { mins = "0" + today.getMinutes().toString(); }
+    var time = parseInt(today.getHours().toString() + mins);
+    console.log(time);
+
 
     var nextTaskIndex = 0;
     let nextTaskIndexFound = false;
