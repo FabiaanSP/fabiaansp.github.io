@@ -32,7 +32,7 @@ function refreshTimeTable() {
     zeiten.forEach(zeit => {
         if (zeit >= time && !nextTourIndexFound) {
             if (task[zeiten.indexOf(zeit)] == f) {
-                nextTourIndex = zeiten.indexOf(zeit) - 1;
+                nextTourIndex = zeiten.indexOf(zeit);
                 nextTourIndexFound = true;
             }
         }
