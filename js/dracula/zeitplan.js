@@ -42,7 +42,7 @@ function refreshTimeTable() {
     let time1 = zeiten[nextTaskIndex].toString().slice(0,2) + ":" + zeiten[nextTaskIndex].toString().slice(2);
     let time2 = zeiten[nextTaskIndex + 1].toString().slice(0,2) + ":" + zeiten[nextTaskIndex + 1].toString().slice(2);
 
-    let nextTourTime = zeiten[nextTourIndex + 1].toString().slice(0,2) + ":" + zeiten[nextTourIndex + 1].toString().slice(2);
+    let nextTourTime = zeiten[nextTourIndex].toString().slice(0,2) + ":" + zeiten[nextTourIndex].toString().slice(2);
     $('.timeTable #1').html(time1 + " - " + task[nextTaskIndex]);
     $('.timeTable #2').html(time2 + " - " + task[nextTaskIndex + 1]);
     $('.timeTable #nextTour').html(nextTourTime + " Uhr");
