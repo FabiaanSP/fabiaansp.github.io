@@ -1,1 +1,0 @@
-$('#homeButton').css('top', $('.head').height() + 40 + 'px');
