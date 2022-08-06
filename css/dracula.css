@@ -1,3 +1,7 @@
+footer tr td {
+    width: 25vw;
+}
+
 .timeTable {
     width: 100vw;
     text-align: center;
