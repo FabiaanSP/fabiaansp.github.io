@@ -17,28 +17,28 @@ function select(e) {
     targetPageClassName = e.getAttribute('pageClassName');
 
     if (document.getElementsByClassName(targetPageClassName)[0].getAttribute('page') < document.getElementsByClassName(currentPage)[0].getAttribute('page')) {
-        $('.' + currentPage).addClass('animate__slideOutRight');
+        $('.' + currentPage).addClass('animate__fadeOutRight');
  
         setTimeout(function(){
             $('.' + targetPageClassName).css("display", "block");
-            $('.' + targetPageClassName).addClass('animate__slideInLeft');
+            $('.' + targetPageClassName).addClass('animate__fadeInLeft');
 
             $('.' + currentPage).css("display", "none");
-            $('.' + currentPage).removeClass('animate__slideOutRight');
-            setTimeout(function(){ $('.' + targetPageClassName).removeClass('animate__slideInLeft'); },1000);
+            $('.' + currentPage).removeClass('animate__fadeOutRight');
+            setTimeout(function(){ $('.' + targetPageClassName).removeClass('animate__fadeInLeft'); },1000);
 
             currentPage = targetPageClassName;
         },500);
     } else {
-        $('.' + currentPage).addClass('animate__slideOutLeft');
+        $('.' + currentPage).addClass('animate__fadeOutLeft');
  
         setTimeout(function(){
             $('.' + targetPageClassName).css("display", "block");
-            $('.' + targetPageClassName).addClass('animate__slideInRight');
+            $('.' + targetPageClassName).addClass('animate__fadeInRight');
 
             $('.' + currentPage).css("display", "none");
-            $('.' + currentPage).removeClass('animate__slideOutLeft');
-            setTimeout(function(){ $('.' + targetPageClassName).removeClass('animate__slideInRight'); },1000);
+            $('.' + currentPage).removeClass('animate__fadeOutLeft');
+            setTimeout(function(){ $('.' + targetPageClassName).removeClass('animate__fadeInRight'); },1000);
 
             currentPage = targetPageClassName;
         },500);

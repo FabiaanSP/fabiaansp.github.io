@@ -1,11 +1,5 @@
 * {
      margin: 0;
-     background-color: rgba(0, 194, 42, 0.404);
-}
-
-html {
-    width: 100vw;
-    height: 100vh;
 }
 
 :root {
@@ -19,8 +13,7 @@ body {
     font-family: 'Roboto', sans-serif;
     width: 100vw;
     height: 100vh;
-    position: relative;
-    /* overflow: hidden; */
+    overflow-x: hidden;
 }
 
 h1, h2 { color: white; text-align: center;padding-left: 10px; }
