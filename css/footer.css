@@ -1,0 +1,58 @@
+:root {
+    --selectedColor: rgb(37, 34, 255)
+}
+
+#homeButton {
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    border: 0;
+    background-color: transparent;
+    color: white;
+    font-size: 1.4rem;
+}
+
+footer {
+    position: fixed;
+    bottom: -5px;
+    text-align: center;
+    width: 100vw;
+    color: white;
+}
+
+footer table {
+    width: 100%;
+    background-color: rgb(44, 44, 44);
+    padding-top: 7.5px;
+    padding-bottom: 12px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+footer table tr td {
+    transition: color 0.5s;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+footer table tr td i {
+    font-size: 28px;
+    padding-bottom: 7.5px;
+}
+
+.selectionIndicator {
+    transition: left 0.5s;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 20vw;
+    height: 5px;
+    background-color: var(--selectedColor);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.selectedMenuPunkt {
+    transition: color 0.5s;
+    color: rgb(63, 59, 252);
+}

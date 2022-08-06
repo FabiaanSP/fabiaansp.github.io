@@ -7,8 +7,14 @@ html {
     height: 100%;
 }
 
+:root {
+    --background-color1: rgb(129, 0, 250);
+    --background-color2: rgb(212, 0, 0);
+
+}
+
 body {
-    background-image: linear-gradient(to bottom right, rgb(37, 255, 91), rgb(0, 255, 179));
+    background-image: linear-gradient(to bottom right, var(--background-color1), var(--background-color2));
     font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
 }
@@ -31,7 +37,7 @@ h2 {
 .head {
     background-color: rgba(31, 31, 31, 0.527);
     padding-top: 10px;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     width: 100vw;

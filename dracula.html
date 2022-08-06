@@ -12,6 +12,7 @@
     <!-- CSS Links -->
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/dracula.css">
+    <link rel="stylesheet" href="css/footer.css">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,6 +26,7 @@
     <script src="js/main.js" defer></script>
     <script src="js/dracula/dracula.js" defer></script>
     <script src="js/dracula/zeitplan.js" defer></script>
+    <script src="js/MenuEngine.js" defer></script>
 
     <!-- Animate.css -->
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css'/>
@@ -36,10 +38,9 @@
     <div class="head">
         <button id="homeButton" onclick="location.href = 'index.html';"><i class="fa-solid fa-house"></i></button>
         <h1>Fantasiana Team <span id="prototyp">Dracula</span></h1>
-        <h2>Programmiert und Entwickelt von Fabian Sporn</h2>
     </div>
 
-    <div class="timeTable">
+    <div class="timeTable animate__animated" page="1">
         <h1>Nächste Führung</h1>
         <div id="nextTour">11:30 - Ladefehler</div>
 
@@ -48,13 +49,18 @@
         <div id="2">11:00 - Ladefehler</div>
     </div>
 
+    <div class="Fuehrung animate__animated" page="2" style="display: none;">
+        <h1>Führung</h1>
+    </div>
+
     <footer>
+        <div class="selectionIndicator"></div>
         <table>
             <tr>
-                <td><i class="fa-solid fa-clock"></i><br>Zeitplan</td> 
-                <td><i class="fa-solid fa-comment-dots"></i><br>Führung</td>
-                <td><i class="fa-brands fa-pagelines"></i><br>Zauberwald</td>
-                <td><i class="fa-solid fa-handshake"></i><br>Ablöse</td>
+                <td onclick="select(this);" pageClassName="timeTable" id="1menuItem" class="selectedMenuPunkt"><i class="fa-solid fa-clock"></i><br>Zeitplan</td> 
+                <td onclick="select(this);" pageClassName="Fuehrung" style="padding-left: 10px;"><i class="fa-solid fa-comment-dots"></i><br>Führung</td>
+                <td onclick="select(this);" pageClassName="3"><i class="fa-solid fa-ghost"></i><br>Erschrecker</td>
+                <td onclick="select(this);" pageClassName="4"><i class="fa-brands fa-pagelines"></i><br>Zauberwald</td>
             </tr>
 
         </table>
