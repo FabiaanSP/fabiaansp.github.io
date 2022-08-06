@@ -1,5 +1,6 @@
 * {
      margin: 0;
+     /* background-color: rgba(0, 194, 42, 0.404); */
 }
 
 html {
@@ -16,6 +17,8 @@ html {
 body {
     background-image: linear-gradient(to bottom right, var(--background-color1), var(--background-color2));
     font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    position: relative;
     overflow-x: hidden;
 }
 
