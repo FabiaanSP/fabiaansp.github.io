@@ -29,5 +29,3 @@ function select(e) {
             currentPage = targetPageClassName;
         },500); 
 }
-
-select(lastSelected);
