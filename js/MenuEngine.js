@@ -4,6 +4,8 @@ Indicator = $('.selectionIndicator');
 currentPage = "timeTable";
 
 function select(e) {
+    if (e.getAttribute('pageClassName') == 'timeTable') { refreshTimeTable(); }
+
     lastSelected.classList.remove("selectedMenuPunkt");
     e.classList.add("selectedMenuPunkt");
 

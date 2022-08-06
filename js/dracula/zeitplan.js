@@ -13,8 +13,6 @@ function refreshTimeTable() {
     let mins = today.getMinutes();
     if (mins < 10) { mins = "0" + today.getMinutes().toString(); }
     var time = parseInt(today.getHours().toString() + mins);
-    console.log(time);
-
 
     var nextTaskIndex = 0;
     let nextTaskIndexFound = false;
@@ -38,7 +36,6 @@ function refreshTimeTable() {
         }
     });
 
-    console.log(zeiten[nextTaskIndex] + " - " + task[nextTaskIndex]);
     let time1 = zeiten[nextTaskIndex].toString().slice(0,2) + ":" + zeiten[nextTaskIndex].toString().slice(2);
     let time2 = zeiten[nextTaskIndex + 1].toString().slice(0,2) + ":" + zeiten[nextTaskIndex + 1].toString().slice(2);
 
@@ -47,5 +44,5 @@ function refreshTimeTable() {
     $('.timeTable #2').html(time2 + " - " + task[nextTaskIndex + 1]);
     $('.timeTable #nextTour').html(nextTourTime + " Uhr");
 
-
+    console.log("time table refreshed")
 }
