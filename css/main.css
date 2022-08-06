@@ -1,6 +1,6 @@
 * {
      margin: 0;
-     /* background-color: rgba(0, 194, 42, 0.404); */
+     background-color: rgba(0, 194, 42, 0.404);
 }
 
 html {
@@ -17,9 +17,10 @@ html {
 body {
     background-image: linear-gradient(to bottom right, var(--background-color1), var(--background-color2));
     font-family: 'Roboto', sans-serif;
+    width: 100vw;
     height: 100vh;
     position: relative;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 h1, h2 { color: white; text-align: center;padding-left: 10px; }
