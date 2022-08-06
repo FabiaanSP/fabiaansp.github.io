@@ -19,7 +19,7 @@ body {
     font-family: 'Roboto', sans-serif;
     height: 100vh;
     position: relative;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 h1, h2 { color: white; text-align: center;padding-left: 10px; }

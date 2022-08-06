@@ -44,3 +44,5 @@ function select(e) {
         },500);
     }    
 }
+
+select(lastSelected);
