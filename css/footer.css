@@ -13,8 +13,8 @@
 }
 
 footer {
-    position: fixed;
-    bottom: -5px;
+    position: absolute;
+    bottom: 0;
     text-align: center;
     width: 100vw;
     color: white;
