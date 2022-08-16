@@ -1,0 +1,45 @@
+.container {
+    width: 70%;
+    min-height: 50vh;
+    border-radius: 20px;
+    position: relative;
+    left: 50%;
+    top: 45vh;
+    transform: translate(-50%, -50%);
+    background-color: rgba(32, 32, 32, 0.541);
+    color: white;
+    
+}
+
+body {
+    background-image: linear-gradient(to bottom right, rgb(253, 1, 1), rgb(255, 0, 98));
+    min-height: 100vh;
+    background-color: rgb(252, 255, 230);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    overflow: hidden;
+}
+
+h1 {
+    padding-top: 20px;
+}
+
+h2 {
+    font-size: 80px;
+    margin: 50px;
+    padding-bottom: 150px;
+}
+
+#input {
+    position: absolute;
+    bottom: 20px;
+    width: 80%;
+    left: 10%;
+    font-size: 42px;
+    text-align: center;
+    user-select: none;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
