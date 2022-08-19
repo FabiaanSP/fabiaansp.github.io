@@ -40,6 +40,8 @@ const phraseDatabase = [
     "NATO hat einen Ansaar",
     "NATO hat einen Rayid-Ansaar von uns",
     "Wir haben einen Vize-Kommandaten",
+    "Wo sind sie mein Vize-Emir",
+    "Wir sind im Dorf",
     ""
 ];
 
