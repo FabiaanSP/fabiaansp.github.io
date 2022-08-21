@@ -12,7 +12,7 @@ const phraseDatabase = [
     "Scharfschützen auf dem Berg",
     "Wir machen Angriff, alle kommen",
     "Versammlung! Wir greifen an",
-    "Brauchen sie EK mein Groß-Bashir",
+    "Brauchen sie EK mein Groß-Wesir",
     "Ansaar+ zur Ausbildungstafel kommen",
     "Kommt alle zum Funkbunker",
     "Wo bist du?",
@@ -42,7 +42,19 @@ const phraseDatabase = [
     "Wir haben einen Vize-Kommandaten",
     "Wo sind sie mein Vize-Emir",
     "Wir sind im Dorf",
-    ""
+    "NATO macht Versammlung",
+    "Erschieß den Vize-Kommandanten",
+    "Major General mit den Seals drausen",
+    "Leck mich",
+    "Ich hasse dich",
+    "Spast",
+    "Sag das noch einmal und du bekommst eine Kugel zwischen die Augen",
+    "Ihr werdet alle erschossen!",
+    "Ein Kämpfer läuft über",
+    "Wo bist du?",
+    "Wo seit ihr?",
+    "Von wem hast du die Erlaubnis?",
+    "Haben sie zeit für ein Tryout"
 ];
 
 function randomIntFromInterval(min, max) { return Math.floor(Math.random() * (max - min + 1) + min) } // min and max included
