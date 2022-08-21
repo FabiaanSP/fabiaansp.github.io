@@ -2,7 +2,7 @@ const abc = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const encrypted = "XYZABCDEFGHIJKLMNOPQRSTUVW";
 
 function randomIntFromInterval(min, max) { // min and max included 
-    return Math.floor(Math.random() * (max - min + 1) + min)
+    return Math.floor(Math.random() * (max - min + 1) + min);
   }
 
 function isUpperCase(x) {
@@ -15,10 +15,11 @@ let rnd = randomIntFromInterval(0, abc.length - 1);
 display.innerHTML = abc[rnd];
 
 var firstNext = true;
+var startup = true;
 next();
 
 function next() {
-    
+    if (verified()) {   
     display.innerHTML = abc[rnd];
         
         if (input.value.toUpperCase() == encrypted[rnd] || firstNext) {
@@ -42,7 +43,9 @@ function next() {
         }
         
         input.value = "";
-
+    } else {
+        if (!startup) { alert("Loginfehler:\n Versuche dich erneut anzumelden, oder kontaktiere Fabian Siedler"); } else {startup = false;}
+    }
 }
 
 function convert(x) {
@@ -57,5 +60,20 @@ function convert(x) {
 
 
 function changeMode() {
-    location.href = "./sentences";
+    let url = new URL(window.location);
+    let pass = url.searchParams.get("token");
+    let passIndex = url.searchParams.get("passIndex");
+    location.href = "./sentences/index.html?token=" + pass + "&passIndex=" + passIndex.toString();
+}
+
+function verified() {
+    let url = new URL(window.location);
+    let tokenFromURL = url.searchParams.get("token");
+    let passIndexFromURL = url.searchParams.get("passIndex");
+
+    if (tokenFromURL != null && passIndexFromURL != null) {
+        if (sha256(Passcodes[passIndexFromURL]) == tokenFromURL) {
+            return true;
+        } else { return false; }
+    } else { return false; }
 }

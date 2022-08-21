@@ -66,9 +66,11 @@ let rnd = randomIntFromInterval(0, phraseDatabase.length - 1);
 display.innerHTML = convert(phraseDatabase[rnd]);
 
 var firstNext = true;
+var startup = true;
 next();
 
-function next() {       
+function next() {
+    if (verified()) {
         if (input.value.toUpperCase() == phraseDatabase[rnd].toUpperCase() || firstNext) {
             firstNext = false;
 
@@ -88,6 +90,10 @@ function next() {
             display.innerHTML = convert(phraseDatabase[rnd]);
         }
         input.value = "";
+    } else {
+        if (!startup) { alert("Loginfehler:\n Versuche dich erneut anzumelden, oder kontaktiere Fabian Siedler"); } else {startup = false;}
+
+    }
 }
 
 // HINWEIß:
@@ -117,5 +123,20 @@ function convert(x) {
 
 
 function changeMode() {
-    location.href = "../"
+    let url = new URL(window.location);
+    let pass = url.searchParams.get("token");
+    let passIndex = url.searchParams.get("passIndex");
+    location.href = "../index.html?token=" + pass + "&passIndex=" + passIndex.toString();
+}
+
+function verified() {
+    let url = new URL(window.location);
+    let tokenFromURL = url.searchParams.get("token");
+    let passIndexFromURL = url.searchParams.get("passIndex");
+
+    if (tokenFromURL != null && passIndexFromURL != null) {
+        if (sha256(Passcodes[passIndexFromURL]) == tokenFromURL) {
+            return true;
+        } else { return false; }
+    } else { return false; }
 }
