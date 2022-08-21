@@ -6,6 +6,7 @@ if (tokenFromURL != null && passIndexFromURL != null) {
     if (sha256(Passcodes[passIndexFromURL]) == tokenFromURL) {
         console.log("access granted");
         $(".loginPage").hide();
+        document.getElementById('agentName').innerHTML = Usernames[passIndexFromURL];
     }
 }
 
