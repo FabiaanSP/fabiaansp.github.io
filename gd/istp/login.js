@@ -24,7 +24,7 @@ function checkPass(pass) {
 
         tata.info('NATO Server', 'Verbindung wird hergestellt', { position: 'tr', animate: 'slide', duration: 2500 });
         setTimeout(function(){
-            tata.info('Verbunden!', 'Überprüfe Verifizierungscode...', { position: 'tr', animate: 'slide', duration: 2500 });
+            tata.info('Verbunden!', 'Überprüfe Verifizierungscode...', { position: 'tr', animate: 'slide', duration: 1500 });
             setTimeout(function(){
                 tata.info('Verifiziert!', 'Sicherer Zugriff wird gewährt...', { position: 'tr', animate: 'slide', duration: 3500 });
                 setTimeout(function(){
@@ -34,9 +34,9 @@ function checkPass(pass) {
                     document.getElementById('agentName').innerHTML = Usernames[passIndex];
                     document.getElementById('input').value = "";
                     document.getElementById("passInput").disabled = true;
-                },3000)
-            },2000)
-        },2000);
+                },5000)
+            },1500)
+        },2500);
     } else {
 
         tata.info('NATO Server', 'Verbindung wird hergestellt', { position: 'tr', animate: 'slide', duration: 2500 });
