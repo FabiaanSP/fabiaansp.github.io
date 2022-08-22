@@ -64,13 +64,10 @@ function changeMode() {
 }
 
 function verified() {
-    let url = new URL(window.location);
-    let tokenFromURL = url.searchParams.get("token");
-    let passIndexFromURL = url.searchParams.get("passIndex");
+    let pass = $('login').attr('pass');
+    let index = $('login').attr('index');
 
-    if (tokenFromURL != null && passIndexFromURL != null) {
-        if (sha256(Passcodes[passIndexFromURL]) == tokenFromURL) {
-            return true;
-        } else { return false; }
-    } else { return false; }
+    if (Passcodes[index] == sha224(pass)) {
+        return true;
+    } else return false;
 }
