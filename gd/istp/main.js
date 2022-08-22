@@ -60,10 +60,7 @@ function convert(x) {
 
 
 function changeMode() {
-    let url = new URL(window.location);
-    let pass = url.searchParams.get("token");
-    let passIndex = url.searchParams.get("passIndex");
-    location.href = "./sentences/index.html?token=" + pass + "&passIndex=" + passIndex.toString();
+    location.href = "./sentences";
 }
 
 function verified() {
