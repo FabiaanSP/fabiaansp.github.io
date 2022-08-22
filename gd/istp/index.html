@@ -9,18 +9,21 @@
 
     
     <link rel="stylesheet" href="css/main.css" defer>
-    
-    <script src="userDatabase.js"></script>
 
+    <!-- Toast Link -->
+    <script src="tata-master/dist/tata.js"></script>
+    
     <!-- JQEURY CDN -->
     <script src='https://code.jquery.com/jquery-3.4.1.min.js' integrity='sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=' crossorigin='anonymous'></script>
     
-    <script src="main.js" defer></script>
-
     <!-- SHA 256 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.9.0/sha256.min.js" integrity="sha512-szJ5FSo9hEmXXe7b5AUVtn/WnL8a5VofnFeYC2i2z03uS2LhAch7ewNLbl5flsEmTTimMN0enBZg/3sQ+YOSzQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+    <script src="userDatabase.js"></script>
+    <script src="main.js" defer></script>
     <script src="login.js" defer></script>
+
+
 </head>
 <body>
 
@@ -29,10 +32,18 @@
         <label>Willkommen zurück, Agent </label><b id="agentName">Scriptkiddy</b>
     </div>
 
+    
     <div class="loginPage">
+        <div class="orbit-spinner">
+            <div class="orbit"></div>
+            <div class="orbit"></div>
+            <div class="orbit"></div>
+        </div>
+
         <h1>Bitte persönlichen Verifizierungscode eingeben</h1>
 
         <input type="password" maxlength="8" id="passInput"><br>
+
     </div>
 
     <div class="container">
@@ -41,7 +52,10 @@
 
         <input type="text" id="input" onchange="next()" maxlength="1">
     </div>
-    <input type="button" value="Sätze üben" id="changeMode" onclick="changeMode()">
+    
+    <div class="btn btn-three" onclick="changeMode()">
+        <span>Trainingsmodus ändern</span>
+    </div>
     <p style="color: white; font-size: 14px; position: absolute; bottom: 5px; left: 50%; transform: translateX(-50%);">Die Entwicklung eines automatischen Entschlüsslungsprogrammes zählt als Clientmodifikation und wird auf LOS streng sanktioniert!</p>
 </body>
 </html>

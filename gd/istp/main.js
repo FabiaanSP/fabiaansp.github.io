@@ -8,7 +8,7 @@ function randomIntFromInterval(min, max) { // min and max included
 function isUpperCase(x) {
     if (x == x.toUpperCase()) { return true; } else { return false; }
 }
-  
+
 let input = document.querySelector('#input');
 let display = document.querySelector('#display');
 let rnd = randomIntFromInterval(0, abc.length - 1);
@@ -30,13 +30,20 @@ function next() {
             $('#input').css("box-shadow", "0px 0px 20px #00ff00");
             rnd = randomIntFromInterval(0, abc.length - 1);
             display.innerHTML = abc[rnd];
-    
+            tata.success('Richtig!', 'Immer weiter so!', { position: 'tr', animate: 'slide', duration: 2000 });
+            
             setTimeout(function(){
                 $('#input').css("box-shadow", "none");
             },1250)
         } else {
             // Falsch
-            alert("Das war leider Falsch\nRichtige Antwort: " + encrypted[rnd]);
+
+            tata.error('Leider Falsch!', encrypted[rnd] + ' wäre die Richtige Antwort gewesen', {
+                 position: 'br',
+                 animate: 'slide',
+                 duration: 20000
+            });
+
             
             rnd = randomIntFromInterval(0, abc.length - 1);
             display.innerHTML = abc[rnd];
@@ -44,7 +51,11 @@ function next() {
         
         input.value = "";
     } else {
-        if (!startup) { alert("Loginfehler:\n Versuche dich erneut anzumelden, oder kontaktiere Fabian Siedler"); } else {startup = false;}
+        if (!startup) { tata.error('Loginfehler!', 'Bitte versuche dich erneut anzumelden, und wende dich an Fabian Siedler', {
+            position: 'br',
+            animate: 'slide',
+            duration: 20000
+       }); } else {startup = false;}
     }
 }
 

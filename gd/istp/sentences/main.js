@@ -84,15 +84,23 @@ function next() {
             },1250)
         } else {
             // Falsch
-            alert("Das war leider Falsch\nRichtige Antwort: " + phraseDatabase[rnd]);
+            tata.error('Leider Falsch!', '"' + phraseDatabase[rnd] + '" wäre die Richtige Antwort gewesen', {
+                position: 'br',
+                animate: 'slide',
+                duration: 20000
+           });
             
             rnd = randomIntFromInterval(0, phraseDatabase.length - 1);
             display.innerHTML = convert(phraseDatabase[rnd]);
         }
         input.value = "";
     } else {
-        if (!startup) { alert("Loginfehler:\n Versuche dich erneut anzumelden, oder kontaktiere Fabian Siedler"); } else {startup = false;}
-
+        if (!startup) {
+             tata.error('Loginfehler!', 'Bitte versuche dich erneut anzumelden, und wende dich an Fabian Siedler', {
+            position: 'br',
+            animate: 'slide',
+            duration: 20000
+       }); } else {startup = false;}
     }
 }
 
