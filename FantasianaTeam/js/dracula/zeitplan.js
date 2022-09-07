@@ -1,10 +1,11 @@
 const zeiten = [1030,1100,1130,1200,1230,1300,1330,1400,1430,1500,1530,1600,1630,1700,1715];
 
 let f = 'Führung';
+let lf = 'Letzte Führung';
 let za = 'Zauberwald, Ablöse';
 let a = 'Ablöse';
 
-const task = [f, f, f, za, a, 'Pause', f, f, f, za, a, 'Pause', f, f, f];
+const task = [f, f, lf, za, a, 'Pause', f, f, lf, za, a, 'Pause', f, f, lf];
 
 var today = new Date();
 refreshTimeTable();
