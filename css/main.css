@@ -1,0 +1,407 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+:root {
+    --red: rgb(250, 59, 59);
+    --fontBlack: rgb(36, 36, 36);
+}
+
+
+* {margin: 0; scroll-behavior: smooth;}
+
+body {
+    background-image: url('../assets/images/topHintergrund.jpg');
+
+    /* Full height */
+    height: 100vh;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-position-y: 55%;
+
+    font-family: 'Roboto', sans-serif;
+    color: white;
+
+    overflow-x: hidden;
+}
+
+.parallax {
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-position-y: 55%;
+
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+#back2TopBtn {
+    transition: opacity, bottom 0.3s ease-in-out;
+    position: fixed;
+    bottom: clamp(10px, 2vh, 20px);
+    right: clamp(10px, 2vw, 20px);
+    z-index: 9999;
+    font-size: 30px;
+    border: 0;
+    color: white;
+    background-color: rgb(77, 77, 77);
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    padding-top: -50px;
+    opacity: 0.3;
+}
+
+#back2TopBtn span {
+    text-align: center;
+    line-height: 20px;
+    vertical-align: middle;
+}
+
+#back2TopBtn:hover {
+    transition: opacity, bottom 0.3s ease-in-out;
+    opacity: 1;
+    bottom: clamp(8px, 3vh, 30px);
+}
+
+/* ========================== START SECTION ============================= */
+
+.start-Section {
+    height: 92vh;
+}
+
+.start-Section h1 {
+    position: absolute;
+    font-size: clamp(2rem, 8vw, 5rem);
+    font-weight: 600;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    text-align: center;
+}
+/* =========================== ABOUT SECTION ===============================*/
+
+.about-Section {
+    min-height: 70vh;
+    background-image: linear-gradient(to right bottom, rgb(119, 187, 255), rgb(199, 95, 247));
+    margin-bottom: -55px;
+}
+
+/* ========================== SCHOOL SECTION ============================= */
+
+
+.school-Section {
+    position: relative;
+    padding: 10px;
+    background-color: white;
+    min-height: calc(100% - 60px);
+    color: rgb(36, 36, 36);
+    margin-top: -2px;
+}
+
+.school-Section h1 {
+    font-size: clamp(4rem, 10vw, 5rem);
+    font-weight: 800;
+    text-align: center;
+    margin-top: 1rem;
+    color: rgb(36, 36, 36);
+    font-family: 'Bebas Neue', cursive;
+}
+
+.school-Section article {
+    text-align: right;
+    margin-top: clamp(2.5vh, 3vh, 5vh);
+    padding-right: clamp(5px, 3vw, 7.5vw);
+    position: relative;
+    z-index: 1;
+}
+
+.school-Section article h2 {
+    /* font-size: 2.5rem; */
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    font-family: 'Bebas Neue', cursive;
+}
+
+.school-Section article p {
+    margin-top: 10px;
+    font-size: clamp(0.75rem, 1vw, 1.5rem);
+}
+
+b {
+    color: var(--red);
+}
+
+.school-Section img {
+    width: clamp(400px, 50%, 80vw);
+    position: absolute;
+    bottom: 50px;
+    margin-top: -15vh;
+}
+
+#imageCr {
+    font-size: 0.7rem;
+    color: rgb(158, 158, 158);
+    position: absolute;
+    bottom: 5px;
+    margin-top: -10vh;
+}
+
+
+/* ========================== JOB SECTION ============================= */
+
+.berufs-Section {
+    background-image: url('../assets/images/career.jpg');
+    background-position-y: 80%;
+    min-height: calc(100vh - 40px);
+    padding-top: 20vh;
+    padding-bottom: 20vh;
+}
+
+.berufs-Section h1 {
+    padding-top: 20px;
+    font-size: 5rem;
+    font-weight: 800;
+    text-align: center;
+    color: white;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.berufs-Section article {
+    text-align: center;
+    padding-top: 10vh;
+    position: relative;
+    z-index: 1;
+
+    background-color: rgba(36, 36, 36, 0.9);
+    padding: 10px;
+    border-radius: 20px;
+    width: 70%;
+    margin-inline: auto;
+    color: white;
+}
+
+.berufs-Section article h2 {
+    font-size: 1.5rem;
+    color: white;
+
+    margin-bottom: 50px;
+}
+
+.berufs-Section article p {
+    margin-top: 10px;
+}
+
+.berufs-Section a {
+    text-decoration: none;
+}
+
+/* ========================== MOPED SECTION ============================= */
+
+
+.moped-Section {
+    position: relative;
+    padding: 10px;
+    background-color: white;
+    min-height: 70vh;
+    color: rgb(36, 36, 36);
+    z-index: 0;
+    padding-top: 30px;
+}
+
+.moped-Section h1 {
+    font-size: 5rem;
+    font-weight: 800;
+    text-align: center;
+    margin-top: 1rem;
+    color: rgb(36, 36, 36);
+    font-family: 'Bebas Neue', cursive;
+
+    position: relative;
+    z-index: 0;
+}
+
+.moped-Section article {
+    text-align: right;
+    margin-top: 5vh;
+    padding-right: 7.5vw;
+    position: relative;
+    z-index: 1;
+}
+
+.moped-Section article h2 {
+    font-size: clamp(2rem, 6vw, 2.5rem);
+    font-family: 'Bebas Neue', cursive;
+}
+
+.moped-Section article p {
+    margin-top: 10px;
+}
+
+.moped-Section article ul li {font-size: clamp(0.9rem, 2vw, 1rem);}
+
+
+b {
+    color: var(--red);
+}
+
+.moped-Section img {
+    width: 50%;
+    padding-bottom: 5vh;
+    margin-left: -20vh;
+    margin-top: -30vh;
+
+}
+
+@media screen and (max-width: 600px) {
+    .moped-Section img {
+        margin-top: -10vh;
+    }
+}
+
+.moped-Section li {
+    display: block;
+}
+
+#mopedImg {
+    z-index: 1;
+}
+
+@media screen and (max-width: 600px) {
+    .moped-Section h1 {font-size: 3rem; }
+    .moped-Section {padding-top: 0;}
+
+}
+
+
+/* ========================== FF SECTION ============================= */
+
+.ff-section {
+    background-image: url('../assets/images/bg2.jpg');
+    background-position-y: 80%;
+    min-height: 50vh;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    position: relative;
+    z-index: 2;
+}
+
+.ff-section h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    text-align: center;
+    color: white;
+    font-family: 'Bebas Neue', cursive;
+    background-color: rgb(255, 58, 58);
+    width: 650px;
+    border-radius: 20px;
+    margin-inline: auto;
+    position: relative;
+    z-index: 10;
+}
+
+.ff-section .swiper {
+    width: 600px;
+    height: 400px;
+    background-color: rgba(24, 24, 24, 0.589);
+    border-radius: 20px;
+    position: relative;
+    z-index: 1;
+    cursor:default;
+    margin-top: -15px;
+}
+
+
+
+.leftLight {
+    content: '';
+    --height: 30px;
+    background-color: rgb(66, 85, 253);
+    width: 80px;
+    height: var(--height);
+    margin-bottom: calc(0px - var(--height) + 10px);
+    border-top-left-radius: 20px;
+}
+
+.rightLight {
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    margin-top: -10px;
+    --height: 30px;
+    background-color: rgb(66, 85, 253);
+    width: 80px;
+    height: var(--height);
+    margin-bottom: calc(0px - var(--height) + 10px);
+    border-top-right-radius: 20px;
+}
+
+.ff-section #imageCrFF {
+    position: relative;
+    z-index: 5;
+    text-align: center;
+    margin-top: -10px;
+    font-size: 0.9rem;
+    background-color: rgb(59, 59, 59);
+    padding: 5px;
+    width: 550px;
+    margin-inline: auto;
+    border-radius: 40px;
+}
+
+/* media query when width is less than 600px */
+@media screen and (max-width: 600px) {
+    .ff-section h1 {
+        width: 96vw;
+        font-size: 2.4rem;
+        padding-bottom: 5px;
+    }
+
+    .ff-section .swiper {
+        width: 90vw;
+        height: auto;
+    }
+
+    .leftLight { width: 50px; }
+    .rightLight {width: 50px; }
+
+    .ff-section #imageCrFF { width: 93vw; }
+}
+
+.ff-section #startSlide {
+    text-align: center;
+    margin-top: 25px;
+    font-size: clamp(0.8rem, 2vw, 1.2rem);
+}
+
+/* media query for less than 600px width */
+@media screen and (max-width: 600px) {
+    .ff-section #startSlide {
+        width: 100vw;
+    }
+}
+
+#leftLightFF, #rightLightFF {
+    transition: background-color, 0.1s;
+}
+
+/* ============================== CONTACT / FOOTER ============================== */
+
+footer {
+    background-color: var(--fontBlack);
+    bottom: 0;
+    text-align: center;
+    font-size: 1.3rem;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#imageCreditFooter {
+    font-size: 0.75rem;
+}
