@@ -1,5 +1,7 @@
 * {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 h1 {
@@ -8,9 +10,13 @@ h1 {
 }
 
 h2 {
+    position: absolute;
     margin-top: 0;
-    font-size: 11px;
+    font-size: 13px;
     text-align: center;
+    z-index: 255;
+    color: white;
+    width: 100vw;
 }
 
 .svg {
@@ -43,5 +49,10 @@ footer table tr td {
 }
 
 .Scanner #reader {
-    height: 50vh;
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 0;
+    height: 80vh;
+    z-index: 254;
 }
