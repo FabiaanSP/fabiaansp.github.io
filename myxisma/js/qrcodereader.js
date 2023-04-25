@@ -1,15 +1,11 @@
-const scanner = new Html5QrcodeScanner('reader',{
-    qrbox: {
-        width: 250,
-        height: 250,
-    },
-    fps: 20,
-});
+const config = { fps: 20, qrbox: { width: 250, height: 250 } };
 
-scanner.render(success, error);
+const scanner = new Html5QrcodeScanner('reader',config);
 
-// If you want to prefer back camera
-html5QrCode.start({ facingMode: "environment" }, config, qrCodeSuccessCallback);
+//scanner.render(success, error);
+
+// Rückkamera
+scanner.render({ facingMode: "environment" }, config, success, error);
 
 function success(result) {
     alert(result);
