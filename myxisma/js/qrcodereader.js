@@ -1,4 +1,4 @@
-const config = { fps: 40, qrbox: { width: 250, height: 250 } };
+const config = { fps: 60, qrbox: { width: 250, height: 250 } };
 
 const scanner = new Html5Qrcode('reader',config);
 
