@@ -17,6 +17,9 @@
     <!-- Toastify JS -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 
+    <script src="js/qrcodereader.js" defer></script>
+    <script src="js/main.js" defer></script>
+
     <!-- requirejs -->
     <!-- <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script> -->
 
@@ -29,23 +32,32 @@
         <br>
         <img src="images/xxxlutz.jpg" style="height: 30px; padding-top:10px">
     </h2>
-    <div class="Scanner">
+
+    <!-- ================== Scanner Tab ================== -->
+
+    <div id="scannerTab">
         <div id="reader"></div>
-        <script src="js/qrcodereader.js" type="module"></script>
     </div>
     
-    <div class="ScanResult">
-        
+    <!-- ================== Glossar Tab ================== -->
+
+    <div id="glossarTab">
+
     </div>
 
-    
+    <!-- ================== Warenkorb Tab ================== -->
+    <div id="warenkorbTab">
+        <div class="warenkorb__inhalt">
+            <article><h1>0053013401</h1><img src="images/up-right-from-square-solid.svg" alt=""><img src="images/x-solid.svg" alt=""></article>
+        </div>
+    </div>
+        
     <footer class="footer-nav">
         <table>
             <tr>
-                <td><img src="images/barcode-solid.svg" alt="" class="svg"><br>Scanner</td>
-                <td><img src="images/pencil-solid.svg" alt="" class="svg"><br>Notizen</td>
-                <td><img src="images/comments-solid.svg" alt="" class="svg"><br>Personalchat</td>
-                <td><img src="images/cart-shopping-solid.svg" alt="" class="svg"><br>Warenkorb</td>
+                <td onclick="glossarBtn_Clicked()"><img src="images/book-solid.svg" alt="" class="svg"><br>Glossar</td>
+                <td onclick="scannerBtn_Clicked()"><img src="images/barcode-solid.svg" alt="" class="svg"><br>Scanner</td>
+                <td onclick="warenkorbBtn_Clicked()"><img src="images/cart-shopping-solid.svg" alt="" class="svg"><br>Warenkorb</td>
             </tr>
         </table>        
     </footer>
