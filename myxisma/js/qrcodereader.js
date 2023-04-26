@@ -9,7 +9,7 @@ const scanner = new Html5Qrcode('reader',config);
 // ============================== KAMERA STARTUP ==================================
 
 // DO NOT DELETE
-//scanner.start({ facingMode: "environment" }, config, success);
+scanner.start({ facingMode: "environment" }, config, success);
 
 // ============================================================================
 function success(result) {
@@ -32,7 +32,7 @@ function success(result) {
         onClick: function(){} // Callback after click
       }).showToast();
 
-      
+
       alert(result);
     }
 
