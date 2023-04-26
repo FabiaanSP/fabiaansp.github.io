@@ -9,11 +9,11 @@ tab.scanner.hide();
 tab.warenkorb.hide();
 
 function glossarBtn_Clicked() {
+    stopScanning();
+
     tab.glossar.show();
     tab.scanner.hide();
     tab.warenkorb.hide();
-
-    stopScanning();
 }
 
 function scannerBtn_Clicked() {
@@ -25,10 +25,9 @@ function scannerBtn_Clicked() {
 }
 
 function warenkorbBtn_Clicked() {
+    stopScanning();
+
     tab.glossar.hide();
     tab.scanner.hide();
     tab.warenkorb.show();
-
-    stopScanning();
-
 }
