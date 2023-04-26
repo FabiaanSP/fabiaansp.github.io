@@ -8,8 +8,20 @@
 
     <!-- <script src="/js/html5-qrcode.min.js"></script> -->
     
+    <!-- Jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- HTML5 QR Code -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5-qrcode/2.3.8/html5-qrcode.min.js" integrity="sha512-r6rDA7W6ZeQhvl8S7yRVQUKVHdexq+GAlNkNNqVC7YyIV+NwqCTJe2hDWCiffTyRNOeGEzRRJ9ifvRm/HCzGYg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    
+ 
+    <!-- Toastify JS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+    <!-- requirejs -->
+    <!-- <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script> -->
+
+    <!-- Nightmare JS - Webpage Scraper -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/nightmare@3.0.2/lib/nightmare.min.js"></script> -->
 </head>
 <body>
     <h2 style="padding-top:15px">
@@ -19,9 +31,13 @@
     </h2>
     <div class="Scanner">
         <div id="reader"></div>
-        <script src="js/qrcodereader.js"></script>
+        <script src="js/qrcodereader.js" type="module"></script>
     </div>
     
+    <div class="ScanResult">
+        
+    </div>
+
     
     <footer class="footer-nav">
         <table>
@@ -34,5 +50,6 @@
         </table>        
     </footer>
     <link rel="stylesheet" href="css/main.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </body>
 </html>
