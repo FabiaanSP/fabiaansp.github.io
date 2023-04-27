@@ -55,3 +55,7 @@ function success(result) {
 }
 
 // /////////////////////////////////////////////////////////
+
+function getInformationOutOfLink(link) {
+
+}

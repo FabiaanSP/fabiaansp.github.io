@@ -3,14 +3,14 @@
 const cookieExpireDays = 1;
 
 
-function renderCartItem(nummer, anzeigename, shoplink) {
+function renderCartItem(nummer, anzeigename) {
     $(".warenkorb__inhalt").append("<article style='display: inline-flex' id='warenkorbInhaltId_" + nummer + "'><h1>" +
-     nummer + " " + anzeigename + " </h1><a href='" + shoplink + "'><img src='images/up-right-from-square-solid.svg' alt='' ></a><a artikelnummer='" 
+     nummer + " " + anzeigename + " </h1><a href='https://www.xxxlutz.at/s/?s=" + nummer + "'><img src='images/up-right-from-square-solid.svg' alt='' ></a><a artikelnummer='" 
      + nummer + "' onclick='removeItemFromCart(this)'><img src='images/trash-solid.svg' alt='' ></a></article><br>");
 }
 
-function addItemToCart(artikelnummer, Anzeigename, Shoplink, InCart) {
-    setCookie(artikelnummer, getCartFormat(artikelnummer, Anzeigename, Shoplink, InCart), cookieExpireDays);
+function addItemToCart(artikelnummer, Anzeigename, InCart) {
+    setCookie(artikelnummer, getCartFormat(artikelnummer, Anzeigename, InCart), cookieExpireDays);
     location.reload();
  
 }
@@ -24,10 +24,10 @@ function removeItemFromCart(rawNummer) {
         $("#warenkorbInhaltId_" + nummer).remove();
 
         let c = JSON.parse(getCookie(nummer));
-        setCookie(nummer, getCartFormat(c[0],c[1],c[2],false)); // InCart wird jetzt auf false gesetzt
+        setCookie(nummer, getCartFormat(c[0],c[1],false)); // InCart wird jetzt auf false gesetzt
+        location.reload();
     }
 
-    location.reload();
 }
 
 function delete_cookie(name) {
@@ -43,8 +43,8 @@ function DeleteCookieMethod_getCookie(name) {
     });
 }
 
-function getCartFormat(artikelnumemr, anzeigename, shoplink, InCart) {
-    return JSON.stringify([artikelnumemr, anzeigename, shoplink, InCart]);
+function getCartFormat(artikelnumemr, anzeigename, InCart) {
+    return JSON.stringify([artikelnumemr, anzeigename, InCart]);
 }
 
 function setCookie(cookieName, cookieValue, expireDays) {
@@ -90,9 +90,9 @@ function getCookie(cname) {
 function loadAllCartItemsFromCookies() {
     for (var cookie in get_cookies_array()) {
         try {
-            if (JSON.parse(getCookie(cookie))[3]) {
+            if (JSON.parse(getCookie(cookie))[2]) {
                 let c = JSON.parse(getCookie(cookie));
-                renderCartItem(c[0],c[1],c[2]);
+                renderCartItem(c[0],c[1]);
 
                 warenkorbAnzahl++;
             }
