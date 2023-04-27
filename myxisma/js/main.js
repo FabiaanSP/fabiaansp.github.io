@@ -15,13 +15,15 @@ function gotoPage(tabPage) {
 
     if (tabPage == tab.scanner) {
         $("#credits").css("color","white");
+        initScanner();
     } else {
         $("#credits").css("color","black");
+        stopScanning();
 
     }
 }
 
-gotoPage(tab.warenkorb);
+gotoPage(tab.scanner);
 
 function glossarBtn_Clicked() {
     stopScanning();

@@ -50,15 +50,20 @@ function success(result) {
         onClick: function(){} // Callback after click
       }).showToast();
 
+      if (result.includes("xxxlutz")) {
+        addItemToCart(result);
+        gotoPage(tab.warenkorb);
+      }
 
-      alert(result);
+
 }
 
 // /////////////////////////////////////////////////////////
 
 function getArtikelnummerOutOf(link) {
+  if (!link.includes("xxxlutz.at")) {console.error("Link must be from xxxlutz.at"); return;}
   let txt = link;
-  txt = txt.substring(txt.length-12,txt.length);
+  txt = txt.substring(txt.length-10,txt.length);
   return txt;
 }
 
@@ -66,6 +71,8 @@ getArtikelnummerOutOf("https://www.xxxlutz.at/p/dieter-knoll-relaxsessel-in-text
 
 
 function getAnzeigenamenOutOf(link) {
+  if (!(link.includes("xxxlutz"))) {console.error("Link must be from xxxlutz.at");}
+
   let txt = link.replace("https://www.xxxlutz.at/p/","");
   while (txt.includes("-")) {
     txt = txt.replace("-"," ");
