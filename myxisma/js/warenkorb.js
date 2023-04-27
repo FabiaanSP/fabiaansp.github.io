@@ -5,12 +5,14 @@ const cookieExpireDays = 1;
 
 function renderCartItem(nummer, anzeigename) {
     $(".warenkorb__inhalt").append("<article style='display: inline-flex' id='warenkorbInhaltId_" + nummer + "'><h1>" +
-     nummer + " " + anzeigename + " </h1><a href='https://www.xxxlutz.at/s/?s=" + nummer + "'><img src='images/up-right-from-square-solid.svg' alt='' ></a><a artikelnummer='" 
+     nummer + " <span class='wk_anzeigename'>(" + anzeigename + ")</span> </h1><a href='https://www.xxxlutz.at/s/?s=" + nummer + "'><img src='images/up-right-from-square-solid.svg' alt='' ></a><a artikelnummer='" 
      + nummer + "' onclick='removeItemFromCart(this)'><img src='images/trash-solid.svg' alt='' ></a></article><br>");
 }
 
-function addItemToCart(artikelnummer, Anzeigename, InCart) {
-    setCookie(artikelnummer, getCartFormat(artikelnummer, Anzeigename, InCart), cookieExpireDays);
+function addItemToCart(link) {
+    let artikelnummer = getArtikelnummerOutOf(link);
+    let Anzeigename = getAnzeigenamenOutOf(link);
+    setCookie(artikelnummer, getCartFormat(artikelnummer, Anzeigename, true), cookieExpireDays);
     location.reload();
  
 }

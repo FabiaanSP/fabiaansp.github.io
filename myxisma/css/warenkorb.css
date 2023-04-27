@@ -29,3 +29,10 @@
 .warenkorb__inhalt {
     padding-bottom: 20px;
 }
+
+.wk_anzeigename {
+    text-transform: capitalize;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #4e4e4e;
+}
