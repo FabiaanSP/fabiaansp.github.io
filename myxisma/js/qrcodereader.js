@@ -36,26 +36,38 @@ function success(result) {
       }).catch((err) => {
         // Stop failed, handle it.
       });
-
-      Toastify({
-        text: "Artikel in Warenkorb gelegt",
-        duration: 1500,
-        close: false,
-        gravity: "top", // `top` or `bottom`
-        position: "center", // `left`, `center` or `right`
-        stopOnFocus: false, // Prevents dismissing of toast on hover
-        style: {
-          background: "linear-gradient(to right, #ffd414, #f0e248)",
-        },
-        onClick: function(){} // Callback after click
-      }).showToast();
-
-      if (result.includes("xxxlutz")) {
+      
+      if (result.includes("xxxlutz")) {  
         addItemToCart(result);
-        gotoPage(tab.warenkorb);
+        
+        Toastify({
+          text: "Artikel in Warenkorb gelegt",
+          duration: 1500,
+          close: false,
+          gravity: "top", // `top` or `bottom`
+          position: "center", // `left`, `center` or `right`
+          stopOnFocus: false, // Prevents dismissing of toast on hover
+          style: {
+            background: "linear-gradient(to right, #0fd937, #00bf00)",
+          },
+          onClick: function(){} // Callback after click
+        }).showToast();
+      } else {
+        Toastify({
+          text: "Fehler: QR Code nicht von XXXLUTZ.AT",
+          duration: 1500,
+          close: false,
+          gravity: "top", // `top` or `bottom`
+          position: "center", // `left`, `center` or `right`
+          stopOnFocus: false, // Prevents dismissing of toast on hover
+          style: {
+            background: "linear-gradient(to right, #ff483b, #bf0d00)",
+          },
+          onClick: function(){} // Callback after click
+        }).showToast();
       }
 
-
+      setTimeout(function() {initScanner();},1000)
 }
 
 // /////////////////////////////////////////////////////////

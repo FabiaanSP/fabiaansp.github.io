@@ -13,8 +13,8 @@ function addItemToCart(link) {
     let artikelnummer = getArtikelnummerOutOf(link);
     let Anzeigename = getAnzeigenamenOutOf(link);
     setCookie(artikelnummer, getCartFormat(artikelnummer, Anzeigename, true), cookieExpireDays);
-    location.reload();
- 
+
+    loadAllCartItemsFromCookies();
 }
 
 function removeItemFromCart(rawNummer) {
@@ -27,7 +27,7 @@ function removeItemFromCart(rawNummer) {
 
         let c = JSON.parse(getCookie(nummer));
         setCookie(nummer, getCartFormat(c[0],c[1],false)); // InCart wird jetzt auf false gesetzt
-        location.reload();
+        loadAllCartItemsFromCookies();
     }
 
 }
@@ -89,20 +89,22 @@ function getCookie(cname) {
     return "";
 }
 
-function loadAllCartItemsFromCookies() {
+function loadAllCartItemsFromCookies() {    
+
+    $('.warenkorb__inhalt').empty();
+
     for (var cookie in get_cookies_array()) {
         try {
             if (JSON.parse(getCookie(cookie))[2]) {
                 let c = JSON.parse(getCookie(cookie));
                 renderCartItem(c[0],c[1]);
-
-                warenkorbAnzahl++;
             }
         } catch (error) {
-
+            
         }
     }
-    if ($(".warenkorb__inhalt").children().length == 1) { // 1 weil das leerlabel auch drinnen ist.
+
+    if ($(".warenkorb__inhalt").children().length == 0) { // 1 weil das leerlabel auch drinnen ist.
         $("#warenkorbLeerLabel").show();
     } else { $("#warenkorbLeerLabel").hide(); }
 }
