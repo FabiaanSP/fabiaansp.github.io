@@ -17,6 +17,7 @@ function restoreVerlaufItem(item) {
         setCookie(nummer, getCartFormat(c[0],c[1],true)); // InCart wird jetzt auf false gesetzt
         loadAllCartItemsFromCookies();
     }
+    loadAllVerlaufItems();
 }
 
 function loadAllVerlaufItems() {    

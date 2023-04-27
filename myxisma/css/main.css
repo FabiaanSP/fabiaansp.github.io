@@ -71,5 +71,8 @@ footer table tr td {
     width: 100vw;
     text-align: center;
     background-color: #eeeeee;
-    border-radius: 15px;
+    border-radius: 25px;
+    overflow-y: visible;
+    max-height: 65vh;
+    padding-bottom: 30px;
 }
