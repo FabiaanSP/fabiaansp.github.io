@@ -21,6 +21,8 @@
     <script src="js/main.js" defer></script>
     <script src="js/warenkorb.js" defer></script>
 
+    <script src="js/verlauf.js" defer></script>
+
     <!-- requirejs -->
     <!-- <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script> -->
 
@@ -48,7 +50,8 @@
 
     <!-- ==================================== Warenkorb Tab ==================================== -->
 
-    <div id="warenkorbTab" class="tab"><br>
+    <div id="warenkorbTab" class="tab">
+        <h1 style="font-size: 20px;">Warenkorb</h1><br>
         <h1 id="warenkorbLeerLabel">Der Warenkorb ist leer <br><button onclick="scannerBtn_Clicked()">Artikel scannen</button></h1>
         <div class="warenkorb__inhalt">
             <!-- <article style='display: inline-flex' id='warenkorbInhaltId_'><h1>0053013401 {Artikel Info}</h1><a href=''><img src='images/up-right-from-square-solid.svg' alt='' ></a><a href=''><img src='images/trash-solid.svg' alt='' ></a></article> -->
@@ -57,8 +60,16 @@
 
     <!-- ==================================== Verlauf Tab ==================================== -->
 
-    <div class="verlaufTab" class="tab">
+    <div id="verlaufTab" class="tab">
+        <h1 style="font-size: 20px;">Verlauf</h1><br>
+        <h1 id="verlaufLeerLabel">Du hast in den letzten 24 Stunden keine Artikel gescannt
+        <br>
+        <button onclick="scannerBtn_Clicked()">Artikel scannen</button></h1>
+        <div class="verlauf__inhalt">
 
+            <!-- <article style='display: inline-flex' id='warenkorbInhaltId_'><h1>0053013401 {Artikel Info}</h1><a href=''><img src='images/up-right-from-square-solid.svg' alt='' ></a><a href=''><img src='images/rotate-right-solid.svg' alt='' ></a></article> -->
+
+        </div>
     </div>
         
     <!-- ========================================================================================== -->
@@ -75,6 +86,7 @@
     </footer>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/warenkorb.css">
+    <link rel="stylesheet" href="css/verlauf.css">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </body>
 </html>

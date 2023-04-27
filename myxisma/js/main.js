@@ -40,12 +40,14 @@ function scannerBtn_Clicked() {
 function warenkorbBtn_Clicked() {
     stopScanning();
 
+    loadAllCartItemsFromCookies();
     gotoPage(tab.warenkorb);
 }
 
 function verlauf_Clicked() {
     stopScanning();
 
+    loadAllVerlaufItems();
     gotoPage(tab.verlauf);
 
 }
