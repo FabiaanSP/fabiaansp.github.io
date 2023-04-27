@@ -17,3 +17,15 @@
     margin-top: 15px;
 }
 
+#warenkorbLeerLabel button {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #e5b70e;
+    color: white;
+    border: 0;
+    padding-inline: 50px;
+}
+
+.warenkorb__inhalt {
+    padding-bottom: 20px;
+}
