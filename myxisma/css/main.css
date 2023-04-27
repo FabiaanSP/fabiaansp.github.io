@@ -22,7 +22,6 @@ h2 {
 
 .svg {
     height: 24px;
-
 }
 
 footer {
@@ -63,4 +62,14 @@ footer table tr td {
 .Scanner video {
     object-fit: fill;
     height: 100vh;
+}
+
+.tab {
+    position: relative;
+    margin-top: 150px;
+    padding-block: 20px;
+    width: 100vw;
+    text-align: center;
+    background-color: #eeeeee;
+    border-radius: 15px;
 }

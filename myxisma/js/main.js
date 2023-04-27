@@ -2,32 +2,48 @@ const tab = {
     glossar : $("#glossarTab"),
     scanner : $("#scannerTab"),
     warenkorb : $("#warenkorbTab"),
+    verlauf: $("#verlaufTab"),
 }
 
-tab.glossar.show();
-tab.scanner.hide();
-tab.warenkorb.hide();
+function gotoPage(tabPage) {
+    tab.glossar.hide();
+    tab.scanner.hide();
+    tab.warenkorb.hide();
+    tab.verlauf.hide();
+
+    tabPage.show();
+
+    if (tabPage == tab.scanner) {
+        $("#credits").css("color","white");
+    } else {
+        $("#credits").css("color","black");
+
+    }
+}
+
+gotoPage(tab.warenkorb);
 
 function glossarBtn_Clicked() {
     stopScanning();
-
-    tab.glossar.show();
-    tab.scanner.hide();
-    tab.warenkorb.hide();
+    gotoPage(tab.glossar);
 }
 
 function scannerBtn_Clicked() {
     initScanner();
 
-    tab.glossar.hide();
-    tab.scanner.show();
-    tab.warenkorb.hide();
+    gotoPage(tab.scanner);
+
 }
 
 function warenkorbBtn_Clicked() {
     stopScanning();
 
-    tab.glossar.hide();
-    tab.scanner.hide();
-    tab.warenkorb.show();
+    gotoPage(tab.warenkorb);
+}
+
+function verlauf_Clicked() {
+    stopScanning();
+
+    gotoPage(tab.verlauf);
+
 }

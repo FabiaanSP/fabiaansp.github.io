@@ -19,6 +19,7 @@
 
     <script src="js/qrcodereader.js" defer></script>
     <script src="js/main.js" defer></script>
+    <script src="js/warenkorb.js" defer></script>
 
     <!-- requirejs -->
     <!-- <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script> -->
@@ -27,41 +28,52 @@
     <!-- <script src="https://cdn.jsdelivr.net/npm/nightmare@3.0.2/lib/nightmare.min.js"></script> -->
 </head>
 <body>
-    <h2 style="padding-top:15px">
+    <h2 style="padding-top:15px" id="credits">
         Programmiert von Fabian Sporn (2Z78) für
         <br>
         <img src="images/xxxlutz.jpg" style="height: 30px; padding-top:10px">
     </h2>
 
-    <!-- ================== Scanner Tab ================== -->
+    <!-- ==================================== Scanner Tab ==================================== -->
 
-    <div id="scannerTab">
+    <div id="scannerTab" class="tab">
         <div id="reader"></div>
     </div>
     
-    <!-- ================== Glossar Tab ================== -->
+    <!-- ==================================== Glossar Tab ==================================== -->
 
-    <div id="glossarTab">
+    <div id="glossarTab" class="tab">
 
     </div>
 
-    <!-- ================== Warenkorb Tab ================== -->
-    <div id="warenkorbTab">
+    <!-- ==================================== Warenkorb Tab ==================================== -->
+
+    <div id="warenkorbTab" class="tab">
         <div class="warenkorb__inhalt">
-            <article><h1>0053013401</h1><img src="images/up-right-from-square-solid.svg" alt=""><img src="images/x-solid.svg" alt=""></article>
+            <!-- <article style='display: inline-flex' id='warenkorbInhaltId_'><h1>0053013401 {Artikel Info}</h1><a href=''><img src='images/up-right-from-square-solid.svg' alt='' ></a><a href=''><img src='images/trash-solid.svg' alt='' ></a></article> -->
         </div>
     </div>
+
+    <!-- ==================================== Verlauf Tab ==================================== -->
+
+    <div class="verlaufTab" class="tab">
+
+    </div>
         
+    <!-- ========================================================================================== -->
+
     <footer class="footer-nav">
         <table>
             <tr>
                 <td onclick="glossarBtn_Clicked()"><img src="images/book-solid.svg" alt="" class="svg"><br>Glossar</td>
                 <td onclick="scannerBtn_Clicked()"><img src="images/barcode-solid.svg" alt="" class="svg"><br>Scanner</td>
                 <td onclick="warenkorbBtn_Clicked()"><img src="images/cart-shopping-solid.svg" alt="" class="svg"><br>Warenkorb</td>
+                <td onclick="verlauf_Clicked()"><img src="images/spinner-solid.svg" alt="" class="svg"><br>Verlauf</td>
             </tr>
         </table>        
     </footer>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/warenkorb.css">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </body>
 </html>

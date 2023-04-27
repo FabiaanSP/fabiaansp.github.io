@@ -10,15 +10,23 @@ const scanner = new Html5Qrcode('reader',config);
 
 // DO NOT DELETE
 function initScanner() {
-  scanner.start({ facingMode: "environment" }, config, success);
+  try {
+    scanner.start({ facingMode: "environment" }, config, success);
+  } catch (error) {
+
+  } 
 }
 
 function stopScanning() {
-  scanner.stop().then((ignore) => {
-    // QR Code scanning is stopped.
-  }).catch((err) => {
-    // Stop failed, handle it.
-  });
+  try {
+      scanner.stop().then((ignore) => {
+        // QR Code scanning is stopped.
+      }).catch((err) => {
+        // Stop failed, handle it.
+      });
+  } catch (err) {
+
+  }
 }
 
 // ============================================================================

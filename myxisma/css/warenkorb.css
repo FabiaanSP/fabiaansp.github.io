@@ -1,0 +1,19 @@
+#warenkorbTab .warenkorb__inhalt article a img {
+    height: 20px;
+    margin-right: 20px;
+
+}
+
+#warenkorbTab .warenkorb__inhalt article h1 {
+    width: fit-content;
+    margin-right: 20px;
+}
+
+#warenkorbTab .warenkorb__inhalt article {
+    display: inline-flex;
+    background-color: #fffdce;
+    border-radius: 15px;
+    padding: 10px;
+    margin-top: 15px;
+}
+
