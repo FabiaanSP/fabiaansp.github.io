@@ -30,6 +30,7 @@ function stopScanning() {
 }
 
 // ============================================================================
+
 function success(result) {
     scanner.stop().then((ignore) => {
         // QR Code scanning is stopped.
@@ -72,25 +73,36 @@ function success(result) {
 
 // /////////////////////////////////////////////////////////
 
-function getArtikelnummerOutOf(link) {
-  if (!link.includes("xxxlutz.at")) {console.error("Link must be from xxxlutz.at"); return;}
-  let txt = link;
-  txt = txt.substring(txt.length-10,txt.length);
-  return txt;
+function QRgetArtikelnummerOutOf(link) {
+  link = link.replace("http://www.xxxlutz.at/qr/product/","");
+  let splittedLink = link.split("/");
+
+  let x = splittedLink[1] + "/" + splittedLink[2]
+  console.log(x);
+  return x;
 }
 
-getArtikelnummerOutOf("https://www.xxxlutz.at/p/dieter-knoll-relaxsessel-in-textil-hellbraun-000436013068");
+QRgetArtikelnummerOutOf("http://www.xxxlutz.at/qr/product/21/23000175/01/4/1402/")
+
+// function getArtikelnummerOutOf(link) {
+//   if (!link.includes("xxxlutz.at")) {console.error("Link must be from xxxlutz.at"); return;}
+//   let txt = link;
+//   txt = txt.substring(txt.length-10,txt.length);
+//   return txt;
+// }
+
+// getArtikelnummerOutOf("https://www.xxxlutz.at/p/dieter-knoll-relaxsessel-in-textil-hellbraun-000436013068");
 
 
-function getAnzeigenamenOutOf(link) {
-  if (!(link.includes("xxxlutz"))) {console.error("Link must be from xxxlutz.at");}
+// function getAnzeigenamenOutOf(link) {
+//   if (!(link.includes("xxxlutz"))) {console.error("Link must be from xxxlutz.at");}
 
-  let txt = link.replace("https://www.xxxlutz.at/p/","");
-  while (txt.includes("-")) {
-    txt = txt.replace("-"," ");
-  }
-  txt = txt.substring(0,txt.length-12);
-  return txt
-}
+//   let txt = link.replace("https://www.xxxlutz.at/p/","");
+//   while (txt.includes("-")) {
+//     txt = txt.replace("-"," ");
+//   }
+//   txt = txt.substring(0,txt.length-12);
+//   return txt
+// }
 
-getAnzeigenamenOutOf("https://www.xxxlutz.at/p/dieter-knoll-relaxsessel-in-textil-hellbraun-000436013068");
+// getAnzeigenamenOutOf("https://www.xxxlutz.at/p/dieter-knoll-relaxsessel-in-textil-hellbraun-000436013068");

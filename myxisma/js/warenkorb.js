@@ -10,9 +10,9 @@ function renderCartItem(nummer, anzeigename) {
 }
 
 function addItemToCart(link) {
-    let artikelnummer = getArtikelnummerOutOf(link);
-    let Anzeigename = getAnzeigenamenOutOf(link);
-    setCookie(artikelnummer, getCartFormat(artikelnummer, Anzeigename, true), cookieExpireDays);
+    let artikelnummer = QRgetArtikelnummerOutOf(link);
+    //let Anzeigename = getAnzeigenamenOutOf(link);
+    setCookie(artikelnummer, getCartFormat(artikelnummer, "null", true), cookieExpireDays);
 
     loadAllCartItemsFromCookies();
 }
