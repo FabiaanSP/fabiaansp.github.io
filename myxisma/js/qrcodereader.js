@@ -68,7 +68,7 @@ function success(result) {
         }).showToast();
       }
 
-      setTimeout(function() {initScanner();},1000)
+      setTimeout(function() {initScanner();},0)
 }
 
 // /////////////////////////////////////////////////////////
@@ -77,7 +77,7 @@ function QRgetArtikelnummerOutOf(link) {
   link = link.replace("http://www.xxxlutz.at/qr/product/","");
   let splittedLink = link.split("/");
 
-  let x = splittedLink[1] + "/" + splittedLink[2]
+  let x = splittedLink[1] + splittedLink[2]
   console.log(x);
   return x;
 }
