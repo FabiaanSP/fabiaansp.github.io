@@ -14,15 +14,16 @@ function gotoPage(tabPage) {
     tabPage.show();
 
     if (tabPage == tab.scanner) {
-        $("#credits").css("color","white");
+        //$("#credits").css("color","white");
         initScanner();
     } else {
-        $("#credits").css("color","black");
+        //$("#credits").css("color","black");
         stopScanning();
 
     }
 }
 
+$("#credits").css("color","black");
 gotoPage(tab.scanner);
 
 function glossarBtn_Clicked() {

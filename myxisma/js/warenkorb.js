@@ -32,6 +32,14 @@ function removeItemFromCart(rawNummer) {
 
 }
 
+function clearAllCookies() {
+    if (confirm("Bist du sicher dass du ALLE gespeichtern Artikel löschen möchtest?")) {
+        document.cookie.split(";").forEach(function(c) { document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/"); });
+    }
+
+    loadAllCartItemsFromCookies();
+}
+
 function delete_cookie(name) {
     if (DeleteCookieMethod_getCookie(name)) {
         document.cookie = name + "=path=/" +
