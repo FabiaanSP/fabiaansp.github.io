@@ -82,7 +82,7 @@ function QRgetArtikelnummerOutOf(link) {
   return x;
 }
 
-QRgetArtikelnummerOutOf("http://www.xxxlutz.at/qr/product/21/23000175/01/4/1402/")
+QRgetArtikelnummerOutOf("http://www.xxxlutz.at/qr/product/21/23000175/01/4/1402/");
 
 // function getArtikelnummerOutOf(link) {
 //   if (!link.includes("xxxlutz.at")) {console.error("Link must be from xxxlutz.at"); return;}
